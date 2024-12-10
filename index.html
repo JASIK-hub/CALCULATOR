@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="container-input">
+        <input type="text" id="display" readonly />
+          <div class="memory">
+            <h3>M1:</h3>
+            <p id="saved" class="saved-numbers">0</p>
+          </div>
+          <i onclick="showAlert()" class='bx bx-copy-alt'></i>
+      </div>
+      <hr />
+      <p class="buh">Бухгалтерский</p>
+      <div class="button">
+        <button class="math" onclick="memoryClear()">MC</button>
+        <button class="math" onclick="memoryRecall()">MR</button>
+        <button class="math" onclick="memoryMinus()">M-</button>
+        <button class="math" onclick="memoryPlus()">M+</button>
+        <button class="math" onclick="calculateRoot('√')">√</button>
+        <button class="math">MU</button>
+
+        <button class="math" onclick="changeValue('+/-')">+/-</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay(':')" class="oper">:</button>
+        <button class="math" onclick="percent('%')">%</button>
+
+        <button class="math" onclick="removeDigit('→')">→</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('*')" class="oper">*</button>
+        <button onclick="appendToDisplay('-')" class="oper">-</button>
+
+        <button class="red" onclick="clearAll()">AC</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+
+        <button onclick="appendToDisplay('+')" class="oper" id="plus">+</button>
+        <button onclick="calculateResult()" class="equal">=</button>
+        <button onclick="clearDisplay()" class="red">C</button>
+        <button onclick="appendToDisplay('0')">0</button>
+
+        <button onclick="twoZeros('00')">00</button>
+        <button onclick="appendToDisplay('.')">.</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
